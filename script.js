@@ -1,15 +1,5 @@
 let header = document.getElementById("product-size-buttons");
 let btns = document.getElementsByClassName("size-button");
-let countNum = 1;
-let minusBtn = document.getElementById("minus-btn");
-let count = document.getElementById("count");
-let plusBtn = document.getElementById("plus-btn");
-let countCart = 0;
-let countCartClicks = document.getElementById("button-add-cart");
-let countBag = document.getElementById("header-bag-counter");
-let countBuy = 0;
-let countBuyClicks = document.getElementById("button-buy");
-
 
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
@@ -18,6 +8,11 @@ for (let i = 0; i < btns.length; i++) {
   this.className += " active";
   });
 }
+
+let countNum = 1;
+let minusBtn = document.getElementById("minus-btn");
+let count = document.getElementById("count");
+let plusBtn = document.getElementById("plus-btn");
 
 count.innerHTML = countNum;
 
@@ -35,6 +30,10 @@ plusBtn.addEventListener("click", () => {
     }
 });
 
+let countCart = 0;
+let countCartClicks = document.getElementById("button-add-cart");
+let countBag = document.getElementById("header-bag-counter");
+
 countBag.innerhtml = countCart;
 
 
@@ -44,6 +43,9 @@ countCartClicks.addEventListener("click", () => {
         countBag.innerHTML = countCart;
     }
 });
+
+let countBuy = 0;
+let countBuyClicks = document.getElementById("button-buy");
 
 countBag.innerhtml = countBuy;
 
